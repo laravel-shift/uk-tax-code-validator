@@ -14,7 +14,7 @@ class TaxCode implements Stringable
 
     public function __construct(
         private string $taxCode,
-        string $originalTaxCode = null,
+        string|null $originalTaxCode = null,
         private array $modifiers = [],
     ) {
         $this->originalTaxCode = $originalTaxCode ?? $this->taxCode;
